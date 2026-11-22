@@ -1,30 +1,30 @@
 import 'dart:io';
-import 'package:quiz/quiz.dart';
 
-void main(){
-  print("===========================================");
-  print("SEJA BEM-VINDO CARO JOGADOR");
-  print("QUAL O SEU NOME ?");
-  String player = stdin.readLineSync()!;
-  print("===========================================");
-  print("Vamos começar $player ?");
-  print("Digite [1]- sim, [2]- não, [3]- sair");
-  print("===========================================");
-  int? esc = int.tryParse(stdin.readLineSync()!);
+void main() {
+  print('===== QUIZ =====');
 
-  bool escolha = true;
-  switch (esc){
-    case 1 : escolha = true;
-    case 2 : print("Tem certeza?");
-    int? certeza = int.tryParse(stdin.readLineSync()!);
-    if (certeza == 1){
-      print("Saindo...");
-      escolha = false;
-    } else {
-      print("Voltando...");
-      escolha = true;
+  String nome = '';
+  while (nome.isEmpty) {
+    stdout.write('Qual é o seu nome? ');
+    nome = stdin.readLineSync()?.trim() ?? '';
+    if (nome.isEmpty) {
+      print('O nome não pode ficar vazio.');
     }
-    case 3 : escolha = false;
-    default:
   }
+
+  print('\nOlá, $nome! Vamos começar.');
+
+  String jogarNovamente;
+  do {
+    //jogar(nome); criar ainda essa parte pra começar o game
+
+    while (true) {
+      stdout.write('\nDeseja jogar novamente? (S/N): ');
+      jogarNovamente = stdin.readLineSync()?.trim().toUpperCase() ?? '';
+      if (jogarNovamente == 'S' || jogarNovamente == 'N') break;
+      print('Digite apenas S ou N.');
+    }
+  } while (jogarNovamente == 'S');
+
+  print('\nObrigado por jogar, $nome! Até a próxima.');
 }
