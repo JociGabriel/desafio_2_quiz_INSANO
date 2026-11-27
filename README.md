@@ -1,6 +1,6 @@
 # Quiz Dart - Desafio dos Devs
 
-- **Integrantes:** Jocilfran Gabriel Gomes de França e _(nome do segundo integrante)_
+- **Integrantes:** Jocilfran Gabriel Gomes de França e Rauan Talyson Lopes dos Santos
 - **Trilha:** Desenvolvimento Mobile
 
 ## Apresentação
